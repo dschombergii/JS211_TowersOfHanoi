@@ -97,7 +97,7 @@ const isLegal = (startStack, endStack, pieceID) => {
 
 
 const checkForWin = () => {
-  if (stacks.c.length === numberOfDiscs) {
+  if (stacks.b.length === numberOfDiscs) {
     console.log('You win!')
     if (numberOfDiscs === 8) {
       document.getElementById('updates').innerHTML = 'You win! 8 is quite enough, do something else now.'
