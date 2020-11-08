@@ -1,62 +1,182 @@
-[data-row] {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 34px;
-  margin: 25px;
-  border: 1px solid lightgray;
+body {
+  background-color: black;
 }
 
-.row {
-  z-index: -10;
+#canvas {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  display: grid;
+  align-content: center;
 }
 
-[data-row].red {
-  background-color: #f6c5c5;
-}
-
-[data-row].yellow {
-  background-color: #ffffa9;
-}
-
-[data-row].green {
-  background-color: #baf6ba;
-}
-
-[data-row].blue {
-  background-color: aliceblue;
-}
-
-.stone {
-  z-index: 10;
-}
-
-[data-color] {
-  width: 25px;
-  float: left;
-}
-
-[data-color="blue"] {
-  height: 33px;
-  background-color: blue;
-}
-
-[data-color="green"] {
-  height: 33px;
-  background-color: green;
-}
-
-[data-color="red"] {
-  height: 33px;
-  background-color: red;
-}
-
-[data-color="yellow"] {
-  height: 33px;
-  background-color: yellow;
-}
-
-#announce-game-won {
-  font-size: 50px;
+#title {
   text-align: center;
 }
+
+h1 {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.updates {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 20px;
+  color: silver;
+  margin-bottom: 50px;
+}
+
+#towers {
+  color: silver;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+.base {
+  position: relative;
+  width: 180px;
+  height: 200px;
+  margin: auto;
+  border-bottom: solid 9px silver;
+  border-radius: 20px;
+}
+
+.base2 {
+  position: relative;
+  width: 180px;
+  height: 200px;
+  margin: auto;
+  border-bottom: solid 9px #327f6b;
+  border-radius: 20px;
+}
+
+.linea, .linec {
+  padding: 2px;
+  width: 5px;
+  height: 150px;
+  background: silver;
+  border-radius: 180px;
+  padding-top: 50px;
+  margin: 10px 0 0 65px;
+  position: relative;
+  align-items: center;
+}
+
+.lineb {
+  padding: 2px;
+  width: 5px;
+  height: 150px;
+  background: #327f6b;
+  border-radius: 180px;
+  padding-top: 50px;
+  margin: 10px 0 0 65px;
+  position: relative;
+  align-items: center;
+}
+
+#towers li {
+  position: relative;
+  display: block;
+  height: 20px;
+  border-radius: 10px;
+  top: 170px;
+}
+
+#disc8 {
+  background-color: #205fd5;
+  width: 200px;
+  margin: -40px 0 0 -99px;
+}
+
+#disc7 {
+  background-color: #6c4cb9;
+  width: 175px;
+  margin: -40px 0 0 -86px;
+}
+
+#disc6 {
+  background-color: #11335d;
+  width: 150px;
+  margin: -40px 0 0 -73px;
+}
+
+#disc5 {
+  background-color: #ab8417;
+  width: 125px;
+  margin: -40px 0 0 -58px;
+}
+
+#disc4 {
+  background-color: #c3ea8c;
+  width: 100px;
+  margin: -40px 0 0 -46px;
+}
+
+#disc3 {
+  background-color: #02a8f6;
+  width: 75px;
+  margin: -40px 0 0 -34px;
+}
+
+#disc2 {
+  background-color: #ac9f6e;
+  width: 50px;
+  margin: -40px 0 0 -22px;
+}
+
+#disc1 {
+  background-color: #96b04c;
+  width: 30px;
+  margin: -40px 0 0 -12px;
+}
+
+.buttons {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  height: 50px;
+  width: 90px;
+  border-radius: 15px;
+  border: none;
+  background-color: #327f6b;
+  color: black;
+  opacity: 1;
+  outline: none;
+}
+
+.buttons:hover {
+  transform: scale(1.1)
+}
+
+#discNumber {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: silver;
+  margin: auto;
+}
+
+#discs {
+  text-size-adjust: 30px;
+  text-align: center;
+  height: 20px;
+  width: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#reset {
+  margin: auto;
+}
+
+
+
+
+
+

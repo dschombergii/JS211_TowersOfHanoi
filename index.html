@@ -1,25 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <script src="index.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <h1>Towers Of Hanoi</h1>
-    <hr/>
-      <div id="top-row" data-row="top" class="red row" onclick="selectRow(this)"></div>
-      <div id="middle-row" data-row="middle" class="yellow row" onclick="selectRow(this)"></div>
-      <div id="bottom-row" class="green row" data-row="bottom" onclick="selectRow(this)">
-        <div id="4" data-size="4" data-color="yellow" class="stone" ></div>
-        <div id="3" data-size="3" data-color="red" class="stone" ></div>
-        <div id="2" data-size="2" data-color="green" class="stone" ></div>
-        <div id="1" data-size="1" data-color="blue" class="stone" ></div>
+
+<head>
+  <meta charset="utf-8">
+  <title>Towers of Hanoi</title>
+  <script src="index.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div id="canvas">
+    <div id="title">
+      <h1>Towers of Hanoi</h1></div>
+    <br>
+    <div class="updates">
+      <span id="updates">Select number of discs below and then move them all to the right tower.</span>
+      <br>
+      <span id="counter">(You cannot stack bigger discs on top of smaller ones. Good luck!)</span>
+    </div>
+    <br>
+    <br>
+    <div id="towers">
+      <div class="t" value="a" onclick="getStartAndEnd('a', 't1')">
+        <ul value="a" class="base">
+          <ul id="t1" class="linea">
+          </ul>
+        </ul>
       </div>
-    <hr/>
-  </body>
+      <div class="t" id="tower2" value="b" onclick="getStartAndEnd('b', 't2')">
+        <ul value="b" class="base2">
+          <ul id="t2" class="lineb">
+          </ul>
+        </ul>
+      </div>
+      <div class="t" value="c" onclick="getStartAndEnd('c', 't3')">
+        <ul value="c" class="base">
+          <ul id="t3" class="linec">
+          </ul>
+          </ul>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id="discNumber">
+      Enter number of discs: 
+      <select name="discs" id="discs">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3" selected="selected">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>
+    </div>
+    <br>
+    <br>
+    <div id="reset">
+      <button type="button" class="buttons" id="play" onclick="fillStacks()">Play</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+
 </html>
-
-
-
